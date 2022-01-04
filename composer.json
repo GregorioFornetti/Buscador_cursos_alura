@@ -1,0 +1,39 @@
+{
+    "name": "gregoriofornetti/buscador_cursos_alura",
+    "description": "Buscador de cursos alura (projeto de curso composer alura)",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Alura\\BuscadorDeCursos\\": "src/"
+        },
+        "classmap": [
+            "./classes.php"  
+        ],
+        "files": [
+            "./functions.php"
+        ]
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.4",
+        "symfony/dom-crawler": "^6.0",
+        "symfony/css-selector": "^6.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.5",
+        "phan/phan": "^5.3"
+    },
+    "scripts" : {
+        "pahn": "pahn --allow-polyfill-parser",
+        "cs" : "phpcs --standard=PSR12 src/",
+        "check" : [
+            "@pahn",
+            "@cs"
+        ],
+        "post-update-cmd" : [
+            "@cs"
+        ]
+    },
+    "bin" : [
+        "buscadorCursos.php"
+    ]
+}
