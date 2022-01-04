@@ -13,9 +13,11 @@ require 'vendor/autoload.php';
 use GuzzleHttp\Client;
 use Alura\BuscadorDeCursos\{Buscador};
 
+/*
 Classe1::teste();
 Classe2::teste();
 teste();
+*/
 
 $client = new Client(
     [
